@@ -255,18 +255,7 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = function WelcomeScreen() {
 
   return (
     <SafeAreaView style={$page}>
-      <View style={$pageLabel}>
-        <Text style={$labelText}>BFCH · Kaiya</Text>
-        <Text style={$pageTitle}>Interactive app mockup</Text>
-        <Text style={$pageSub}>Phase 1 MVP — tap through the screens</Text>
-      </View>
-
-      <View style={$phone}>
-        <View style={$statusbar}>
-          <Text style={$statusText}>9:41</Text>
-          <Text style={$statusText}>●●●</Text>
-        </View>
-
+      <View style={$appShell}>
         <View style={$topbar}>
           <View>
             <Text style={$topbarTitle}>{activeTopbar.title}</Text>
@@ -636,72 +625,21 @@ function ToggleRow({
 }
 
 const navy = "#1a1a2e"
-const cream = "#f0efe8"
 const screenBg = "#f5f5f0"
 const line = "#e8e8e0"
 const muted = "#888"
 
 const $page: ViewStyle = {
-  alignItems: "center",
-  backgroundColor: cream,
-  flex: 1,
-  paddingHorizontal: 16,
-  paddingTop: 32,
-}
-
-const $pageLabel: ViewStyle = {
-  alignItems: "center",
-}
-
-const $labelText: TextStyle = {
-  color: "#999",
-  fontSize: 11,
-  fontWeight: "500",
-  letterSpacing: 0.6,
-  marginBottom: 8,
-  textTransform: "uppercase",
-}
-
-const $pageTitle: TextStyle = {
-  color: "#1a1a1a",
-  fontSize: 22,
-  fontWeight: "500",
-  marginBottom: 4,
-}
-
-const $pageSub: TextStyle = {
-  color: muted,
-  fontSize: 13,
-  marginBottom: 28,
-}
-
-const $phone: ViewStyle = {
   backgroundColor: "#fff",
-  borderColor: "#ccc",
-  borderRadius: 40,
-  borderWidth: 1,
-  boxShadow: "0 8px 40px rgba(0,0,0,0.13)",
+  flex: 1,
+}
+
+const $appShell: ViewStyle = {
+  backgroundColor: "#fff",
   display: "flex",
   flex: 1,
-  marginBottom: 16,
-  maxHeight: 640,
-  maxWidth: 320,
   overflow: "hidden",
   width: "100%",
-}
-
-const $statusbar: ViewStyle = {
-  backgroundColor: navy,
-  flexDirection: "row",
-  justifyContent: "space-between",
-  paddingBottom: 5,
-  paddingHorizontal: 18,
-  paddingTop: 10,
-}
-
-const $statusText: TextStyle = {
-  color: "#fff",
-  fontSize: 11,
 }
 
 const $topbar: ViewStyle = {
